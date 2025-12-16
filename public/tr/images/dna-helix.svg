@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dnaGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a90013" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ffdee2" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="dnaGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffdee2" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#a90013" stop-opacity="0.7"/>
+    </linearGradient>
+    
+    <!-- Filter for glow effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Ana SVG'yi 45 derece döndür -->
+  <g transform="rotate(45, 400, 300)">
+    <!-- DNA Helix -->
+    <g>
+      <!-- First strand -->
+      <path d="M 400,0 
+               Q 500,75 400,150 
+               Q 300,225 400,300 
+               Q 500,375 400,450 
+               Q 300,525 400,600" 
+            stroke="url(#dnaGradient1)" 
+            stroke-width="8" 
+            fill="none" 
+            filter="url(#glow)">
+        <animate attributeName="d" 
+                 dur="15s" 
+                 repeatCount="indefinite" 
+                 values="M 400,0 Q 500,75 400,150 Q 300,225 400,300 Q 500,375 400,450 Q 300,525 400,600;
+                         M 400,0 Q 300,75 400,150 Q 500,225 400,300 Q 300,375 400,450 Q 500,525 400,600;
+                         M 400,0 Q 500,75 400,150 Q 300,225 400,300 Q 500,375 400,450 Q 300,525 400,600"/>
+      </path>
+      
+      <!-- Second strand -->
+      <path d="M 400,0 
+               Q 300,75 400,150 
+               Q 500,225 400,300 
+               Q 300,375 400,450 
+               Q 500,525 400,600" 
+            stroke="url(#dnaGradient2)" 
+            stroke-width="8" 
+            fill="none" 
+            filter="url(#glow)">
+        <animate attributeName="d" 
+                 dur="15s" 
+                 repeatCount="indefinite" 
+                 values="M 400,0 Q 300,75 400,150 Q 500,225 400,300 Q 300,375 400,450 Q 500,525 400,600;
+                         M 400,0 Q 500,75 400,150 Q 300,225 400,300 Q 500,375 400,450 Q 300,525 400,600;
+                         M 400,0 Q 300,75 400,150 Q 500,225 400,300 Q 300,375 400,450 Q 500,525 400,600"/>
+      </path>
+      
+      <!-- DNA Rungs -->
+      <g>
+        <!-- Rung 1 -->
+        <line x1="400" y1="75" x2="400" y2="75" stroke="#ffdee2" stroke-width="4">
+          <animate attributeName="x1" values="300;500;300" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="x2" values="500;300;500" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="y1" values="85;65;85" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="65;85;65" dur="15s" repeatCount="indefinite"/>
+        </line>
+        
+        <!-- Rung 2 -->
+        <line x1="400" y1="225" x2="400" y2="225" stroke="#ffdee2" stroke-width="4">
+          <animate attributeName="x1" values="500;300;500" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="x2" values="300;500;300" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="y1" values="235;215;235" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="215;235;215" dur="15s" repeatCount="indefinite"/>
+        </line>
+        
+        <!-- Rung 3 -->
+        <line x1="400" y1="375" x2="400" y2="375" stroke="#ffdee2" stroke-width="4">
+          <animate attributeName="x1" values="300;500;300" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="x2" values="500;300;500" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="y1" values="385;365;385" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="365;385;365" dur="15s" repeatCount="indefinite"/>
+        </line>
+        
+        <!-- Rung 4 -->
+        <line x1="400" y1="525" x2="400" y2="525" stroke="#ffdee2" stroke-width="4">
+          <animate attributeName="x1" values="500;300;500" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="x2" values="300;500;300" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="y1" values="535;515;535" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="515;535;515" dur="15s" repeatCount="indefinite"/>
+        </line>
+      </g>
+      
+      <!-- DNA Base Pairs (circles at connection points) -->
+      <g>
+        <!-- Pair 1 -->
+        <circle cx="350" cy="75" r="8" fill="#a90013" opacity="0.9">
+          <animate attributeName="cx" values="350;450;350" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="85;65;85" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="r" values="8;10;8" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="450" cy="75" r="8" fill="#ffdee2" opacity="0.9">
+          <animate attributeName="cx" values="450;350;450" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="65;85;65" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="r" values="8;10;8" dur="5s" repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- Pair 2 -->
+        <circle cx="450" cy="225" r="8" fill="#a90013" opacity="0.9">
+          <animate attributeName="cx" values="450;350;450" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="235;215;235" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="r" values="8;10;8" dur="8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="350" cy="225" r="8" fill="#ffdee2" opacity="0.9">
+          <animate attributeName="cx" values="350;450;350" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="215;235;215" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="r" values="8;10;8" dur="6s" repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- Pair 3 -->
+        <circle cx="350" cy="375" r="8" fill="#a90013" opacity="0.9">
+          <animate attributeName="cx" values="350;450;350" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="385;365;385" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="r" values="8;10;8" dur="7.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="450" cy="375" r="8" fill="#ffdee2" opacity="0.9">
+          <animate attributeName="cx" values="450;350;450" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="365;385;365" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="r" values="8;10;8" dur="5.5s" repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- Pair 4 -->
+        <circle cx="450" cy="525" r="8" fill="#a90013" opacity="0.9">
+          <animate attributeName="cx" values="450;350;450" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="535;515;535" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="r" values="8;10;8" dur="8.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="350" cy="525" r="8" fill="#ffdee2" opacity="0.9">
+          <animate attributeName="cx" values="350;450;350" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="cy" values="515;535;515" dur="15s" repeatCount="indefinite"/>
+          <animate attributeName="r" values="8;10;8" dur="6.5s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      
+      <!-- Floating molecules -->
+      <g>
+        <circle cx="200" cy="150" r="5" fill="#ffdee2" opacity="0.6">
+          <animate attributeName="cy" values="150;140;160;150" dur="8s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="200;210;190;200" dur="10s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;0.8;0.6" dur="5s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle cx="600" cy="250" r="6" fill="#a90013" opacity="0.6">
+          <animate attributeName="cy" values="250;270;240;250" dur="9s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="600;590;610;600" dur="11s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;0.9;0.6" dur="6s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle cx="150" cy="400" r="7" fill="#ffdee2" opacity="0.5">
+          <animate attributeName="cy" values="400;380;410;400" dur="10s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="150;160;140;150" dur="12s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.5;0.8;0.5" dur="7s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle cx="650" cy="450" r="5" fill="#a90013" opacity="0.7">
+          <animate attributeName="cy" values="450;460;440;450" dur="7s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="650;640;660;650" dur="9s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.7;0.9;0.7" dur="5s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      
+      <!-- Molecular structure connections -->
+      <g stroke="#ffdee2" stroke-width="1" opacity="0.4">
+        <line x1="200" y1="150" x2="600" y2="250">
+          <animate attributeName="x1" values="200;210;190;200" dur="10s" repeatCount="indefinite"/>
+          <animate attributeName="y1" values="150;140;160;150" dur="8s" repeatCount="indefinite"/>
+          <animate attributeName="x2" values="600;590;610;600" dur="11s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="250;270;240;250" dur="9s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.4;0.6;0.4" dur="7s" repeatCount="indefinite"/>
+        </line>
+        
+        <line x1="150" y1="400" x2="650" y2="450">
+          <animate attributeName="x1" values="150;160;140;150" dur="12s" repeatCount="indefinite"/>
+          <animate attributeName="y1" values="400;380;410;400" dur="10s" repeatCount="indefinite"/>
+          <animate attributeName="x2" values="650;640;660;650" dur="9s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="450;460;440;450" dur="7s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.4;0.6;0.4" dur="8s" repeatCount="indefinite"/>
+        </line>
+        
+        <line x1="200" y1="150" x2="150" y2="400">
+          <animate attributeName="x1" values="200;210;190;200" dur="10s" repeatCount="indefinite"/>
+          <animate attributeName="y1" values="150;140;160;150" dur="8s" repeatCount="indefinite"/>
+          <animate attributeName="x2" values="150;160;140;150" dur="12s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="400;380;410;400" dur="10s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.4;0.6;0.4" dur="9s" repeatCount="indefinite"/>
+        </line>
+        
+        <line x1="600" y1="250" x2="650" y2="450">
+          <animate attributeName="x1" values="600;590;610;600" dur="11s" repeatCount="indefinite"/>
+          <animate attributeName="y1" values="250;270;240;250" dur="9s" repeatCount="indefinite"/>
+          <animate attributeName="x2" values="650;640;660;650" dur="9s" repeatCount="indefinite"/>
+          <animate attributeName="y2" values="450;460;440;450" dur="7s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.4;0.6;0.4" dur="6s" repeatCount="indefinite"/>
+        </line>
+      </g>
+      
+      <!-- Floating particles -->
+      <g>
+        <circle cx="100" cy="100" r="2" fill="#ffdee2" opacity="0.8">
+          <animate attributeName="cy" values="100;500;100" dur="20s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="100;300;100" dur="25s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle cx="700" cy="100" r="2" fill="#a90013" opacity="0.8">
+          <animate attributeName="cy" values="100;500;100" dur="22s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="700;500;700" dur="28s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle cx="300" cy="500" r="2" fill="#ffdee2" opacity="0.8">
+          <animate attributeName="cy" values="500;100;500" dur="18s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="300;500;300" dur="24s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle cx="500" cy="500" r="2" fill="#a90013" opacity="0.8">
+          <animate attributeName="cy" values="500;100;500" dur="19s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="500;700;500" dur="26s" repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- Additional floating particles -->
+        <circle cx="150" cy="150" r="1.5" fill="#ffdee2" opacity="0.7">
+          <animate attributeName="cy" values="150;350;150" dur="17s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="150;250;150" dur="20s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle cx="650" cy="150" r="1.5" fill="#a90013" opacity="0.7">
+          <animate attributeName="cy" values="150;350;150" dur="16s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="650;550;650" dur="21s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle cx="250" cy="450" r="1.5" fill="#ffdee2" opacity="0.7">
+          <animate attributeName="cy" values="450;250;450" dur="18s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="250;350;250" dur="22s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle cx="550" cy="450" r="1.5" fill="#a90013" opacity="0.7">
+          <animate attributeName="cy" values="450;250;450" dur="19s" repeatCount="indefinite"/>
+          <animate attributeName="cx" values="550;650;550" dur="23s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+  </g>
+</svg>

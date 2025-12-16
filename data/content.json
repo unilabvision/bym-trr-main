@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "badge": "GELECEĞİN AI TEKNOLOJİSİ",
+    "title": "İş Süreçlerinizi",
+    "titleHighlight": "Güçlendirennn",
+    "subtitle": "Yapay Zeka Çözümleri",
+    "description": "Modern yapay zeka teknolojimiz ile iş süreçlerinizi otomatikleştirin, verimliliğinizi artırın ve rekabet avantajı elde edin. UNIDEV Software özelleştirilebilir çözümlerle işletmenize değer katar.",
+    "features": [
+      "Veri analizi ve tahminleme",
+      "İş süreç otomasyonu",
+      "Karar destek sistemleri"
+    ],
+    "primaryButton": "Ücretsiz Demoo",
+    "secondaryButton": "Tanıtım Videosu"
+  },
+  "stats": {
+    "title": "UNIDEV Softwareaa",
+    "subtitle": "Rakamlarla Performansımız",
+    "description": "UNIDEV Software olarak müşterilerimize sunduğumuz kaliteli hizmetler ve başarılı projelerimizle gurur duyuyoruz.",
+    "stats": [
+      {
+        "icon": "Users",
+        "value": "150+",
+        "label": "Mutlu Müşteri",
+        "description": "Farklı sektörlerden işletmelere hizmet veriyoruz"
+      },
+      {
+        "icon": "Code",
+        "value": "50+",
+        "label": "Tamamlanan Proje",
+        "description": "Başarıyla teslim edilmiş yazılım projeleri"
+      },
+      {
+        "icon": "Server",
+        "value": "99.9%",
+        "label": "Çalışma Süresiss",
+        "description": "Sunduğumuz çözümlerin yüksek erişilebilirliği"
+      },
+      {
+        "icon": "Award",
+        "value": "10+",
+        "label": "Yıllık Deneyim",
+        "description": "Yazılım ve teknoloji sektöründe uzmanlık"
+      }
+    ],
+    "ctaButton": "Başarı hikayelerimizi keşfedin"
+  }
+}
